@@ -17,14 +17,18 @@ class App extends Component {
     }))
   }
 
+  decreaseCount = () => {
+    this.setState(({count}) => ({
+      count: count < 1 ? 0 : count -1
+    }))
+  }
+
   render() {
     return (
       <div>
         <div className="counter">{this.state.count}</div>
         <button onClick={this.increaseCount}>Increase</button>
-
-
-
+        <button onClick={this.decreaseCount}>decrease</button>
       </div>
       
     )
