@@ -35,7 +35,7 @@ class App extends Component {
         <div className="counter">{this.state.count}</div>
         <button onClick={this.increaseCount}>Increase</button>
         <button onClick={this.decreaseCount}>decrease</button>
-        <button onClick={this.resetCount}>decrease</button>
+        <button disabled={this.state.count === 0} onClick={this.resetCount}>reset</button>
       </div>
       
     )
